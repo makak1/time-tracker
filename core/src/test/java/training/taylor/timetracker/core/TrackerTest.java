@@ -17,19 +17,21 @@ import training.taylor.timetracker.core.dao.TimeEntry;
 public class TrackerTest {
     @Autowired
     private Tracker tracker;
-
+    int n=0;
     @Test
     public void testMe() {
         assertNotNull(tracker);
     }
 
     @Test
-    public void testAdd() {
+    public void testAdd() throws Exception 
+{
         TimeEntry entry = new TimeEntry();
         entry.setDescription("Entry Test");
         entry.setRate(80.0f);
         entry.setTime(3);
         tracker.add(entry);
+        int j= 10/n;
         assertTrue(tracker.size() > 0);
     }
 }
