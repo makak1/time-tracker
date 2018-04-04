@@ -17,7 +17,7 @@ import training.taylor.timetracker.core.dao.TimeEntry;
 public class TrackerTest {
     @Autowired
     private Tracker tracker;
-    int n=0;
+    
     @Test
     public void testMe() {
         assertNotNull(tracker);
@@ -31,7 +31,7 @@ public class TrackerTest {
         entry.setRate(80.0f);
         entry.setTime(3);
         tracker.add(entry);
-        int j= 10/n;
+        
         assertTrue(tracker.size() > 0);
     }
 }
